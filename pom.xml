@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>locationVoiture</groupId>
-	<artifactId>gestionLocation</artifactId>
+	<artifactId>gestionVoitures</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>gestionLocation</name>
+	<name>gestionVoitures</name>
 	<url>http://maven.apache.org</url>
 	<description>Application de gestion de location des voitures</description>
 	<properties>
@@ -249,7 +249,7 @@
 		</pluginManagement>
 	
 	
-		<finalName>gestionlocation</finalName>
+		<finalName>gestionVoiture</finalName>
 	</build>
 
 </project>

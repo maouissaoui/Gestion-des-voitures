@@ -13,7 +13,7 @@ import fr.gestion.location.service.IManagerService;
  * @param <T>
  *            classe de type DataObject
  */
-@Service("ManagerService")
+@Service("managerService")
 public class ManagerServiceImpl extends AbstractGenericService<Manager> implements IManagerService {
 
 }

@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 // Equivalent to context:component-scan base-package="..." in the xml, states
 // where to find the beans controlled by Spring
 @ComponentScan( basePackages = {        
-	    "fr.gestion.location.spring.serivce",
+	    "fr.gestion.location.spring.service",
 	    "fr.gestion.location.spring.dao"
 	})
 public class SpringConfig {

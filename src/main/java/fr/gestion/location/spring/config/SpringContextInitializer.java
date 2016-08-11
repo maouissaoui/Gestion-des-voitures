@@ -1,5 +1,6 @@
 package fr.gestion.location.spring.config;
 
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 
@@ -25,6 +26,7 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class SpringContextInitializer implements WebApplicationInitializer {
 
+	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		servletContext.setInitParameter("contextConfigLocation", "fr.gestion.location.spring.config");
 		WebApplicationContext rootAppContext = new AnnotationConfigWebApplicationContext();

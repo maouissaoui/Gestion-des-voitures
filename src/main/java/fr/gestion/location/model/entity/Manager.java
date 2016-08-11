@@ -66,24 +66,24 @@ public class Manager extends AbstractDataObject{
 	
 	
 
-	@OneToMany(mappedBy = "voiture")
-	private Set<Voiture> voitures;
-	
+//	@OneToMany(mappedBy = "voiture")
+//	private Set<Voiture> voitures;
+//	
 
 
 	/**
 	 * @return the voitures
 	 */
-	public Set<Voiture> getVoitures() {
-		return voitures;
-	}
-
-	/**
-	 * @param voitures the voitures to set
-	 */
-	public void setVoitures(Set<Voiture> voitures) {
-		this.voitures = voitures;
-	}
+//	public Set<Voiture> getVoitures() {
+//		return voitures;
+//	}
+//
+//	/**
+//	 * @param voitures the voitures to set
+//	 */
+//	public void setVoitures(Set<Voiture> voitures) {
+//		this.voitures = voitures;
+//	}
 
 	@Override
 	public int getId() {

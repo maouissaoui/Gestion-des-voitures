@@ -1,5 +1,6 @@
 package fr.gestion.location.spring.config;
 
+
 import java.util.Properties;
 
 import javax.sql.DataSource;
@@ -57,7 +58,7 @@ public class HibernateConfiguration {
 		sessionFactory.setDataSource(dataSource());
 		
 		 // Indicates where are the POJOs (DTO)
-		sessionFactory.setPackagesToScan(new String[] { "fr.gestion.location.spring.entity" });
+		sessionFactory.setPackagesToScan(new String[] { "fr.gestion.location.model.entity" });
 		// Se asignan las propietes de Hibernate
 		sessionFactory.setHibernateProperties(hibernateProperties());
 		return sessionFactory;
@@ -79,7 +80,7 @@ public class HibernateConfiguration {
 		properties.put("hibernate.dialect", environment.getRequiredProperty("hibernate.dialect"));
 		properties.put("hibernate.show_sql", environment.getRequiredProperty("hibernate.show_sql"));
 		properties.put("hibernate.format_sql", environment.getRequiredProperty("hibernate.format_sql"));
-//		properties.put("hibernate.hbm2ddl.auto", environment.getRequiredProperty("hibernate.hbm2ddl.auto"));
+		properties.put("hibernate.hbm2ddl.auto", environment.getRequiredProperty("hibernate.hbm2ddl.auto"));
 		return properties;
 	}
 

@@ -3,15 +3,18 @@ package fr.gestion.location.model.entity;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 import fr.gestion.location.model.entity.Manager;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -53,8 +56,14 @@ public class Voiture extends AbstractDataObject {
 	@Column(name = "prix")
 	private double prix;
 
-	@ManyToMany(mappedBy = "voitures")
+	
+	
 	@JsonIgnore
+	//@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	@ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.LAZY)
+	@JoinTable(name = "location", joinColumns = { @JoinColumn(name = "idVoiture") }, inverseJoinColumns = {
+			@JoinColumn(name = "idUser") })
+	
 	private List<User> users = new ArrayList<User>();
 
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -70,7 +79,7 @@ public class Voiture extends AbstractDataObject {
 	public Voiture() {
 
 	}
-
+	@JsonIgnore
 	@Override
 	public int getId() {
 		return getIdVoiture();
