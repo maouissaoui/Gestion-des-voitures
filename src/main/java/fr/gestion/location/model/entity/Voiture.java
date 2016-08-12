@@ -62,8 +62,7 @@ public class Voiture extends AbstractDataObject {
 	//@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.LAZY)
 	@JoinTable(name = "location", joinColumns = { @JoinColumn(name = "idVoiture") }, inverseJoinColumns = {
-			@JoinColumn(name = "idUser") })
-	
+			@JoinColumn(name = "idUser") })	
 	private List<User> users = new ArrayList<User>();
 
 	@ManyToOne(fetch = FetchType.LAZY)

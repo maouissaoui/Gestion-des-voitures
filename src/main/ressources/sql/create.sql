@@ -93,7 +93,11 @@ CREATE TABLE `location` (
   `idLocation` int(11) NOT NULL AUTO_INCREMENT,
   `durée`  int(11) NOT NULL,
   `date` datetime NOT NULL,
-  PRIMARY KEY (`idLocation`)
+  PRIMARY KEY (`idLocation`),
+ KEY `FOREIGN_KEY1_idx` (`idUser`),
+  KEY `FOREIGN_KEY2_idx` (`idVoiture`),
+  CONSTRAINT `FOREIGN_KEY1` FOREIGN KEY (`idUser`) REFERENCES `user` (`idUser`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FOREIGN_KEY2` FOREIGN KEY (`idVoiture`) REFERENCES `voiture` (`idVoiture`) ON DELETE CASCADE ON UPDATE CASCADE,  
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
