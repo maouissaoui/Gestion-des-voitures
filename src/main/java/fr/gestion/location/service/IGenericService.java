@@ -2,13 +2,20 @@ package fr.gestion.location.service;
 
 import java.util.List;
 
-
-
 import fr.gestion.location.dao.exception.PersistenceException;
 import fr.gestion.location.model.entity.AbstractDataObject;
 import fr.gestion.location.serivce.exception.BusinessException;
 
-public interface IGenericService<T extends AbstractDataObject>{
+/**
+ * Interface pr�sentant les traitements communs � tous les services
+ * 
+ * @author aouissaoui
+ *
+ * @param <T>
+ *            classe de type DataObject
+ */
+public interface IGenericService<T extends AbstractDataObject> {
+
 	/**
 	 * @param obj
 	 * @throws BusinessException,

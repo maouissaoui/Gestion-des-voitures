@@ -4,6 +4,7 @@ import java.util.List;
 
 import fr.gestion.location.dao.exception.PersistenceException;
 import fr.gestion.location.model.entity.AbstractDataObject;
+
 /**
  * Interface présentant les traitements communs à tous les DAO
  * 
@@ -12,7 +13,8 @@ import fr.gestion.location.model.entity.AbstractDataObject;
  * @param <T>
  *            classe de type DataObject
  */
-public interface ICommonDAO <T extends AbstractDataObject> {
+public interface ICommonDAO<T extends AbstractDataObject> {
+
 	/**
 	 * Get the Class of the entity
 	 * 

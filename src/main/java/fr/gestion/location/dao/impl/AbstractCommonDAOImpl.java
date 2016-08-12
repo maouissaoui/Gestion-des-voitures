@@ -15,6 +15,19 @@ import fr.gestion.location.dao.exception.PersistenceException;
 import fr.gestion.location.model.entity.AbstractDataObject;
 
 
+/**
+ * Classe abstraite présentant les traitements communs à tous les DAO
+ * 
+ * @author naouissaoui
+ *
+ * @param <T>
+ *            classe de type DataObject
+ */
+/**
+ * @author maouissaoui
+ *
+ * @param <T>
+ */
 public abstract class AbstractCommonDAOImpl<T extends AbstractDataObject> implements ICommonDAO<T> {
 
 	/**
@@ -201,4 +214,6 @@ public abstract class AbstractCommonDAOImpl<T extends AbstractDataObject> implem
 	public Class<T> getEntityClass() {
 		return domainClass;
 	}
-	}
+
+}
+
