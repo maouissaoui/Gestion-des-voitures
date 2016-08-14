@@ -1,4 +1,4 @@
-package fr.gestion.location.test;
+package TestUnitaires;
 
 
 import static org.junit.Assert.assertEquals;

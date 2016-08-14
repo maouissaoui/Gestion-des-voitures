@@ -1,4 +1,4 @@
-package fr.gestion.location.test;
+package TestUnitaires;
 
 
 import java.util.HashSet;
