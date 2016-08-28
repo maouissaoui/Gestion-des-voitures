@@ -89,5 +89,4 @@ public interface ICommonDAO<T extends AbstractDataObject> {
 	 */
 	public List<T> findAll() throws PersistenceException;
 
-
 }

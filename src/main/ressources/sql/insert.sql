@@ -14,6 +14,7 @@ commit;
 
 
 
+
 -- inserer des valeurs dans la table user
 INSERT INTO `gestionlocation`.`user`(`idUser`, `nomUser`, `prenomUser`, `cinUser`, `loginUser`, `passwordUser`,`adresseUser`,`telUser`)VALUES ('1', 'AB', 'Haroun', '1187452', 'logg1', 'password1', 'adresse1','0752626485');
 INSERT INTO `gestionlocation`.`user`(`idUser`, `nomUser`, `prenomUser`, `cinUser`, `loginUser`, `passwordUser`,`adresseUser`,`telUser`)VALUES ('2', 'AC', 'h', '51516', 'logg2', 'password2', 'adresse2','8754278');

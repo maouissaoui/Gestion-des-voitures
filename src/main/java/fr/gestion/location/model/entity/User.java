@@ -1,20 +1,17 @@
 package fr.gestion.location.model.entity;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 /**
  * Table User
@@ -62,11 +59,16 @@ public class User extends AbstractDataObject {
 	public User() {
 	}
 
-	@JsonIgnore
-	@ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.LAZY)
-	@JoinTable(name = "Location", joinColumns = { @JoinColumn(name = "idUser") }, inverseJoinColumns = {
-			@JoinColumn(name = "idVoiture") })
-	private Set<Voiture> voitures = new HashSet<Voiture>();
+	// @ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.LAZY)
+	// @JoinTable(name = "Location", joinColumns = { @JoinColumn(name =
+	// "idUser") }, inverseJoinColumns = {
+	// @JoinColumn(name = "idVoiture") })
+	// private Set<Voiture> voitures = new HashSet<Voiture>();
+	
+	 @ManyToMany(mappedBy = "users")
+	 @JsonIgnore
+	 //@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	 private List<Voiture> voitures = new ArrayList<Voiture>();
 
 	@Override
 	public int getId() {
@@ -193,19 +195,13 @@ public class User extends AbstractDataObject {
 		this.telUser = telUser;
 	}
 
-	/**
-	 * @return the voitures
-	 */
-	public Set<Voiture> getVoitures() {
+	public List<Voiture> getVoitures() {
 		return voitures;
 	}
 
-	/**
-	 * @param voitures
-	 *            the voitures to set
-	 */
-	public void setVoitures(Set<Voiture> voitures) {
+	public void setVoitures(List<Voiture> voitures) {
 		this.voitures = voitures;
 	}
+	
 
 }

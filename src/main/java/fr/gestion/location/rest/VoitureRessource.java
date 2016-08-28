@@ -16,9 +16,7 @@ import javax.ws.rs.Produces;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import fr.gestion.location.model.entity.User;
 import fr.gestion.location.model.entity.Voiture;
-import fr.gestion.location.service.IUserService;
 import fr.gestion.location.service.IVoitureService;
 import  fr.gestion.location.dao.exception.PersistenceException;
 import  fr.gestion.location.serivce.exception.BusinessException;

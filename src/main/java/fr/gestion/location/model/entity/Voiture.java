@@ -1,7 +1,9 @@
 package fr.gestion.location.model.entity;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -56,20 +58,16 @@ public class Voiture extends AbstractDataObject {
 	@Column(name = "prix")
 	private double prix;
 
-	
-	
 	@JsonIgnore
-	//@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	// @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.LAZY)
 	@JoinTable(name = "location", joinColumns = { @JoinColumn(name = "idVoiture") }, inverseJoinColumns = {
-			@JoinColumn(name = "idUser") })	
-	private List<User> users = new ArrayList<User>();
+			@JoinColumn(name = "idUser") })
+	private Set<User> users = new HashSet<User>();
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idManager", nullable = false)
-	private Manager manager;
-
-	
+	// @ManyToOne(fetch = FetchType.LAZY)
+	// @JoinColumn(name = "idManager", nullable = false)
+	// private Manager manager;
 
 	public Voiture(int id) {
 		this.idVoiture = id;
@@ -78,7 +76,7 @@ public class Voiture extends AbstractDataObject {
 	public Voiture() {
 
 	}
-	@JsonIgnore
+
 	@Override
 	public int getId() {
 		return getIdVoiture();
@@ -189,34 +187,28 @@ public class Voiture extends AbstractDataObject {
 		this.prix = prix;
 	}
 
-	/**
-	 * @return the users
-	 */
-	public List<User> getUsers() {
+	public Set<User> getUsers() {
 		return users;
 	}
 
-	/**
-	 * @param users
-	 *            the users to set
-	 */
-	public void setUsers(List<User> users) {
+	public void setUsers(Set<User> users) {
 		this.users = users;
 	}
 
-	/**
-	 * @return the manager
-	 */
-	public Manager getManager() {
-		return manager;
-	}
-
-	/**
-	 * @param manager the manager to set
-	 */
-	public void setManager(Manager manager) {
-		this.manager = manager;
-	}
 	
+	// /**
+	// * @return the manager
+	// */
+	// public Manager getManager() {
+	// return manager;
+	// }
+	//
+	// /**
+	// * @param manager the manager to set
+	// */
+	// public void setManager(Manager manager) {
+	// this.manager = manager;
+	// }
+	//
 
 }

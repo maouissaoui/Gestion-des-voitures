@@ -18,7 +18,7 @@ import fr.gestion.location.model.entity.AbstractDataObject;
 /**
  * Classe abstraite présentant les traitements communs à tous les DAO
  * 
- * @author naouissaoui
+ * @author maouissaoui
  *
  * @param <T>
  *            classe de type DataObject
@@ -216,4 +216,3 @@ public abstract class AbstractCommonDAOImpl<T extends AbstractDataObject> implem
 	}
 
 }
-

@@ -1,5 +1,6 @@
 package fr.gestion.location.spring.config;
 
+
 import javax.ws.rs.core.Feature;
 import javax.ws.rs.core.FeatureContext;
 import javax.ws.rs.ext.MessageBodyReader;
@@ -17,6 +18,8 @@ public class JacksonFeature implements Feature {
 
 		context.property(CommonProperties.MOXY_JSON_FEATURE_DISABLE + postfix, true);
 
+		//context.register(JsonParseExceptionMapper.class);
+		//context.register(JsonMappingExceptionMapper.class);
 		context.register(JacksonJsonProvider.class, MessageBodyReader.class, MessageBodyWriter.class);
 
 		return true;

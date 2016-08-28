@@ -1,19 +1,10 @@
 package fr.gestion.location.model.entity;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-
-import fr.gestion.location.model.entity.Voiture;
 
 /**
  * Table Manager
@@ -22,10 +13,10 @@ import fr.gestion.location.model.entity.Voiture;
  */
 @Entity
 @Table(name = "MANAGER")
-public class Manager extends AbstractDataObject{
+public class Manager extends AbstractDataObject {
 	/** serial number */
 	private static final long serialVersionUID = -5632809824222485257L;
-	/**  id manager */
+	/** id manager */
 	@Id
 	@GeneratedValue
 	private int idManager;
@@ -35,26 +26,25 @@ public class Manager extends AbstractDataObject{
 	/** prenom de manager */
 	@Column(name = "prenomManager")
 	private String prenomManager;
-	
+
 	/** cin de manager */
 	@Column(name = "cinManager")
 	private int cinManager;
-	
+
 	/** permis conduite de manager */
 	@Column(name = "permisconduite")
 	private String permisConduite;
-	
+
 	/** numéro de carte de crédit manager */
 	@Column(name = "ncartecredit")
 	private int nCarteCredit;
-	
-	/** login  de manager */
+
+	/** login de manager */
 	@Column(name = "login")
 	private String login;
 	/** password de manager */
 	@Column(name = "password")
 	private String password;
-	
 
 	public Manager(int id) {
 		this.idManager = id;
@@ -62,28 +52,24 @@ public class Manager extends AbstractDataObject{
 
 	public Manager() {
 	}
-	
-	
-	
 
-//	@OneToMany(mappedBy = "voiture")
-//	private Set<Voiture> voitures;
-//	
-
+//	 @OneToMany((fetch = FetchType.LAZY, mappedBy = "voiture")
+//	 private Set<Voiture> voitures;
+	
 
 	/**
 	 * @return the voitures
 	 */
-//	public Set<Voiture> getVoitures() {
-//		return voitures;
-//	}
-//
-//	/**
-//	 * @param voitures the voitures to set
-//	 */
-//	public void setVoitures(Set<Voiture> voitures) {
-//		this.voitures = voitures;
-//	}
+	// public Set<Voiture> getVoitures() {
+	// return voitures;
+	// }
+	//
+	// /**
+	// * @param voitures the voitures to set
+	// */
+	// public void setVoitures(Set<Voiture> voitures) {
+	// this.voitures = voitures;
+	// }
 
 	@Override
 	public int getId() {
@@ -98,7 +84,8 @@ public class Manager extends AbstractDataObject{
 	}
 
 	/**
-	 * @param idManager the idManager to set
+	 * @param idManager
+	 *            the idManager to set
 	 */
 	public void setIdManager(int idManager) {
 		this.idManager = idManager;
@@ -112,7 +99,8 @@ public class Manager extends AbstractDataObject{
 	}
 
 	/**
-	 * @param nomManager the nomManager to set
+	 * @param nomManager
+	 *            the nomManager to set
 	 */
 	public void setNomManager(String nomManager) {
 		this.nomManager = nomManager;
@@ -126,7 +114,8 @@ public class Manager extends AbstractDataObject{
 	}
 
 	/**
-	 * @param prenomManager the prenomManager to set
+	 * @param prenomManager
+	 *            the prenomManager to set
 	 */
 	public void setPrenomManager(String prenomManager) {
 		this.prenomManager = prenomManager;
@@ -140,7 +129,8 @@ public class Manager extends AbstractDataObject{
 	}
 
 	/**
-	 * @param cinManager the cinManager to set
+	 * @param cinManager
+	 *            the cinManager to set
 	 */
 	public void setCinManager(int cinManager) {
 		this.cinManager = cinManager;
@@ -154,7 +144,8 @@ public class Manager extends AbstractDataObject{
 	}
 
 	/**
-	 * @param permisConduite the permisConduite to set
+	 * @param permisConduite
+	 *            the permisConduite to set
 	 */
 	public void setPermisConduite(String permisConduite) {
 		this.permisConduite = permisConduite;
@@ -168,7 +159,8 @@ public class Manager extends AbstractDataObject{
 	}
 
 	/**
-	 * @param nCarteCredit the nCarteCredit to set
+	 * @param nCarteCredit
+	 *            the nCarteCredit to set
 	 */
 	public void setnCarteCredit(int nCarteCredit) {
 		this.nCarteCredit = nCarteCredit;
@@ -182,7 +174,8 @@ public class Manager extends AbstractDataObject{
 	}
 
 	/**
-	 * @param login the login to set
+	 * @param login
+	 *            the login to set
 	 */
 	public void setLogin(String login) {
 		this.login = login;
@@ -196,7 +189,8 @@ public class Manager extends AbstractDataObject{
 	}
 
 	/**
-	 * @param password the password to set
+	 * @param password
+	 *            the password to set
 	 */
 	public void setPassword(String password) {
 		this.password = password;

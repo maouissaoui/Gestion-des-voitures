@@ -74,7 +74,7 @@ public class TestMainVoiture {
 			voitures = service.findAll();
 			for (Voiture voi1 : voitures) {
 				System.out.println(voi1);
-				voiture1.setManager(manager1);
+//				voiture1.setManager(manager1);
 			}}
 			catch (BusinessException | PersistenceException e) {
 			// TODO Auto-generated catch block
