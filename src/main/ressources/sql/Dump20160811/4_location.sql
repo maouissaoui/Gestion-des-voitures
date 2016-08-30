@@ -11,11 +11,11 @@ CREATE TABLE `location` (
   INDEX `fk2_idx` (`idVoiture` ASC),
   CONSTRAINT `fk1`
     FOREIGN KEY (`idUser`)
-    REFERENCES `gestionlocationtest`.`user` (`idUser`)
+    REFERENCES `gestionlocation`.`user` (`idUser`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk2`
     FOREIGN KEY (`idVoiture`)
-    REFERENCES `gestionlocationtest`.`voiture` (`idVoiture`)
+    REFERENCES `gestionlocation`.`voiture` (`idVoiture`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
