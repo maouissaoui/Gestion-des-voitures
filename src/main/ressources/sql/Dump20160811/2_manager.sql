@@ -1,5 +1,5 @@
 CREATE DATABASE  IF NOT EXISTS `gestionlocation` ;
-USE `gestionlocationtest2`;
+USE `gestionlocation`;
 DROP TABLE IF EXISTS `manager`;
 CREATE TABLE `manager` (
   `idManager` int(11) NOT NULL AUTO_INCREMENT,

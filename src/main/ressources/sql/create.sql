@@ -4,8 +4,6 @@ USE `gestionlocation`;
 -- Table structure for table `user`
 --
 
-CREATE DATABASE  IF NOT EXISTS `gestionlocation` ;
-USE `gestionlocationtest2`;
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `idUser` int(11) NOT NULL AUTO_INCREMENT,
@@ -22,8 +20,6 @@ CREATE TABLE `user` (
 -- Table structure for table `manager`
 --
 
-CREATE DATABASE  IF NOT EXISTS `gestionlocation` ;
-USE `gestionlocationtest2`;
 DROP TABLE IF EXISTS `manager`;
 CREATE TABLE `manager` (
   `idManager` int(11) NOT NULL AUTO_INCREMENT,
@@ -43,8 +39,6 @@ CREATE TABLE `manager` (
 --
 
 
-CREATE DATABASE  IF NOT EXISTS `gestionlocation` ;
-USE `gestionlocationtest2`;
 DROP TABLE IF EXISTS `voiture`;
 CREATE TABLE `voiture` (
   `idVoiture` int(11) NOT NULL AUTO_INCREMENT,
@@ -64,7 +58,6 @@ CREATE TABLE `voiture` (
 -- Table structure for table `location`
 --
 
-CREATE DATABASE  IF NOT EXISTS `gestionlocation` ;
 DROP TABLE IF EXISTS `location`;
 CREATE TABLE `location` (
   `idLocaion` INT(11) NOT NULL AUTO_INCREMENT,

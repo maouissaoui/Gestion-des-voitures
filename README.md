@@ -1,5 +1,5 @@
 # Gestion-des-voitures
-**GestionVoitures** est une application permettant de gérer le logement des voitures
+**GestionVoitures** est une application permettant de gérer le location des voitures
 
 ## Base de donnée
 gestionlocation
@@ -47,7 +47,7 @@ MySQL
 ### Serveur
 Jetty 8
 
-### Versioning
+### Gestion de version
 GIT
 
 ### Gestionnaire
