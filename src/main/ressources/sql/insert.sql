@@ -1,3 +1,11 @@
+
+-- inserer des valeurs dans la table user
+INSERT INTO `gestionlocation`.`user`(`idUser`, `nomUser`, `prenomUser`, `cinUser`, `loginUser`, `passwordUser`,`adresseUser`,`telUser`)VALUES ('1', 'AB', 'Haroun', '1187452', 'logg1', 'password1', 'adresse1','0752626485');
+INSERT INTO `gestionlocation`.`user`(`idUser`, `nomUser`, `prenomUser`, `cinUser`, `loginUser`, `passwordUser`,`adresseUser`,`telUser`)VALUES ('2', 'AC', 'h', '51516', 'logg2', 'password2', 'adresse2','8754278');
+INSERT INTO `gestionlocation`.`user`(`idUser`, `nomUser`, `prenomUser`, `cinUser`, `loginUser`, `passwordUser`,`adresseUser`,`telUser`)VALUES ('3', 'A', 'med', '54252', 'logg3', 'password3', 'adresse3','15151541');
+
+commit;
+
 -- inserer des valeurs dans la table projet
 INSERT INTO `gestionlocation`.`manager`
 (`idManager`, `nomManager`, `prenomManager`, `cinManager`, `login`, `password`, `permisconduit`,`ncartecredit`)
@@ -12,15 +20,6 @@ INSERT INTO `gestionlocation`.`manager`
 VALUES ('3', 'Issaoui', 'Fatma', '16515313', 'log3', 'pass3','permis3','57435');
 commit;
 
-
-
-
--- inserer des valeurs dans la table user
-INSERT INTO `gestionlocation`.`user`(`idUser`, `nomUser`, `prenomUser`, `cinUser`, `loginUser`, `passwordUser`,`adresseUser`,`telUser`)VALUES ('1', 'AB', 'Haroun', '1187452', 'logg1', 'password1', 'adresse1','0752626485');
-INSERT INTO `gestionlocation`.`user`(`idUser`, `nomUser`, `prenomUser`, `cinUser`, `loginUser`, `passwordUser`,`adresseUser`,`telUser`)VALUES ('2', 'AC', 'h', '51516', 'logg2', 'password2', 'adresse2','8754278');
-INSERT INTO `gestionlocation`.`user`(`idUser`, `nomUser`, `prenomUser`, `cinUser`, `loginUser`, `passwordUser`,`adresseUser`,`telUser`)VALUES ('3', 'A', 'med', '54252', 'logg3', 'password3', 'adresse3','15151541');
-
-commit;
 
 -- inserer des valeurs dans la table voiture
 INSERT INTO `gestionlocation`.`voiture` (`idVoiture`, `matricule`, `modele`, `marque`,`constructeur`, `moteur`,`prix`,`idManager`)VALUES ('1', 'mat1', 'mod1', 'marque1','const1','moteur1','5462','2');
