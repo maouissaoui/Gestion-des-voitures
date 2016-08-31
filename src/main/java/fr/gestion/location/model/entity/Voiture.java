@@ -65,9 +65,9 @@ public class Voiture extends AbstractDataObject {
 			@JoinColumn(name = "idUser") })
 	private Set<User> users = new HashSet<User>();
 
-	// @ManyToOne(fetch = FetchType.LAZY)
-	// @JoinColumn(name = "idManager", nullable = false)
-	// private Manager manager;
+	 @ManyToOne(fetch = FetchType.LAZY)
+	 @JoinColumn(name = "idManager", nullable = false)
+	 private Manager manager;
 
 	public Voiture(int id) {
 		this.idVoiture = id;
@@ -196,19 +196,19 @@ public class Voiture extends AbstractDataObject {
 	}
 
 	
-	// /**
-	// * @return the manager
-	// */
-	// public Manager getManager() {
-	// return manager;
-	// }
-	//
-	// /**
-	// * @param manager the manager to set
-	// */
-	// public void setManager(Manager manager) {
-	// this.manager = manager;
-	// }
-	//
+	 /**
+	 * @return the manager
+	 */
+	 public Manager getManager() {
+	 return manager;
+	 }
+	
+	 /**
+	 * @param manager the manager to set
+	 */
+	 public void setManager(Manager manager) {
+	 this.manager = manager;
+	 }
+	
 
 }
